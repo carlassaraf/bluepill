@@ -16,6 +16,7 @@
   */
 
 #include "main.h"
+#include <math.h>
 
 // Handler del ADC
 ADC_HandleTypeDef hadc1;
@@ -24,6 +25,21 @@ ADC_HandleTypeDef hadc1;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_ADC1_Init(void);
+
+// Constantes para calcular la temperatura
+
+// Tension de referencia del ADC
+#define VREF			3.3
+// Factor de conversion para obtener la tension
+#define CONV_FACTOR		VREF / (1 << 12)
+// Resistencia serie al NTC
+#define R1				10E3
+// Valor del BETA del NTC
+#define BETA			3950
+// Temperatura de referencia en Kelvin
+#define T0				298.0
+// Resistencia de referencia a T0
+#define R0				10E3
 
 /**
   * @brief  The application entry point.
@@ -43,10 +59,14 @@ int main(void) {
 		HAL_ADC_Start(&hadc1);
 		// Espero a que este lista la conversion
 		while(HAL_ADC_PollForConversion(&hadc1, 10) != HAL_OK);
-		// Leo el valor
-		uint16_t adc_val = HAL_ADC_GetValue(&hadc1);
+		// Leo el valor y calculo la tension medida
+		float v_ntc = HAL_ADC_GetValue(&hadc1) * CONV_FACTOR;
+		// Calculo la resistencia del NTC
+		float r_ntc = R1 / (VREF / v_ntc - 1);
+		// Calculo la temperatura
+		float temp = 1 / (log(r_ntc / R0) / BETA + 1 / T0) - 273.15;
 		// Espero unos milisegundos
-		HAL_Delay(100);
+		HAL_Delay(1000);
 	}
 }
 
