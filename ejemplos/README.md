@@ -7,6 +7,7 @@ A continuacion se describen los ejemplos hasta ahora disponibles:
 | Ejemplo | Descripcion |
 | --- | --- |
 | [ADC polling](adc_basic) | Lectura de un NTC con polling |
+| [ADC IRQ](adc_irq) | Lectura de un NTC con interrupcion |
 
 ## GPIO
 
@@ -27,5 +28,6 @@ A continuacion se describen los ejemplos hasta ahora disponibles:
 [gpio_btn]: gpio_btn/
 [gpio_irq]: gpio_irq/
 [adc_basic]: adc_basic/
+[adc_irq]: adc_irq/
 [i2c_lcd]: i2c_lcd1602/
 [i2c_bmp280]: i2c_bmp280/
