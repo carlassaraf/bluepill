@@ -15,7 +15,7 @@ A continuacion se describen los ejemplos hasta ahora disponibles:
 | ------- | ----------- |
 | [Blinky](gpio_blinky) | Parpadeo de un LED de forma intermitente |
 | [Button](gpio_btn) | Uso de entrada digital con pulsador | 
-| [Interrupcion Externa](gpio_irq) | Uso de interrupcion externa |
+| [Interrupcion Externa](gpio_irq) | Uso de interrupcion externa |s
 
 ## I2C
 
@@ -23,6 +23,7 @@ A continuacion se describen los ejemplos hasta ahora disponibles:
 | --- | --- |
 | [LCD 16x02](i2c_lcd) | Hola mundo en display 16x02 con I2C |
 | [BMP280](i2c_bmp280) | Lectura de presion y temperatura con un BMP280 |
+| [MPU9250](i2c_mpu9250) | Lectura de aceleracion, velocidad angular y temperatura con un MPU9250 |
 
 [gpio_blinky]: gpio_blinky/
 [gpio_btn]: gpio_btn/
@@ -31,3 +32,4 @@ A continuacion se describen los ejemplos hasta ahora disponibles:
 [adc_irq]: adc_irq/
 [i2c_lcd]: i2c_lcd1602/
 [i2c_bmp280]: i2c_bmp280/
+[i2c_mpu9250]: i2c_mpu9250/
