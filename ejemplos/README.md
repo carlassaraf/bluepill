@@ -9,6 +9,12 @@ A continuacion se describen los ejemplos hasta ahora disponibles:
 | [ADC polling](adc_basic) | Lectura de un NTC con polling |
 | [ADC IRQ](adc_irq) | Lectura de un NTC con interrupcion |
 
+## FREERTOS
+
+| Ejemplo | Descripcion |
+| --- | --- |
+| [Blinky](freertos_blinky) | Ejemplo de blinky del built in LED con una tarea de FreeRTOS |
+
 ## GPIO
 
 | Ejemplo | Descripcion |
@@ -33,3 +39,4 @@ A continuacion se describen los ejemplos hasta ahora disponibles:
 [i2c_lcd]: i2c_lcd1602/
 [i2c_bmp280]: i2c_bmp280/
 [i2c_mpu9250]: i2c_mpu9250/
+[freertos_blinky]: freertos_blinky/
