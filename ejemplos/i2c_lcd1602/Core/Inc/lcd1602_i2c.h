@@ -44,7 +44,7 @@
 #define LCD_ENABLE_BIT 0x04
 
 // By default these LCD display drivers are on bus address 0x3f
-#define ADDR (0x3f << 1)
+#define ADDR (0x27 << 1)
 
 // Modes for lcd_send_byte
 #define LCD_CHARACTER  1

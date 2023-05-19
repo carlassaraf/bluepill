@@ -19,7 +19,6 @@ void i2c_write_byte(uint8_t val) {
 void lcd_toggle_enable(uint8_t val) {
     // Toggle enable pin on LCD display
     // We cannot do this too quickly or things don't work
-#define DELAY_US 600
 	HAL_Delay(1);
     i2c_write_byte(val | LCD_ENABLE_BIT);
 	HAL_Delay(1);
