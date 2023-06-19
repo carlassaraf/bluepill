@@ -16,7 +16,7 @@ int main(void) {
     // Declaro estructura de configuracion de GPIO
     GPIO_InitTypeDef gpio_config = {
         .Pin = LED_PIN,
-        .Mode = GPIO_MODE_OUTPUT_OD,
+        .Mode = GPIO_MODE_OUTPUT_PP,
         .Pull = GPIO_NOPULL,
         .Speed = GPIO_SPEED_LOW
     };
