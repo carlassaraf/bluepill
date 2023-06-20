@@ -10,6 +10,12 @@ A continuacion se describen los ejemplos hasta ahora disponibles que fueron desa
 | --- | --- |
 | [ADC polling](adc_polling) | Lectura de un NTC con polling |
 
+## FreeRTOS
+
+| Ejemplo | Descripcion |
+| --- | --- |
+| [FreeRTOS GPIO blinky](freertos_gpio_blinky) | Parpadeo de un LED de forma intermitente
+
 ## GPIO
 
 | Ejemplo | Descripcion |
@@ -20,3 +26,4 @@ A continuacion se describen los ejemplos hasta ahora disponibles que fueron desa
 [gpio_blinky]: gpio_blinky/
 [gpio_input]: gpio_input/
 [adc_polling]: adc_polling/
+[freertos_gpio_blinky]: freertos_gpio_blinky/
