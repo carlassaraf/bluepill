@@ -1,0 +1,19 @@
+{
+    "name": "FreeRTOS",
+    "version": "10.5.1",
+    "keywords": "rtos, timing, thread, task, mutex, semaphore",
+    "description": "Real Time Operating System",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/FreeRTOS/FreeRTOS.git"
+    },
+    "frameworks": "stm32cube",
+    "platforms": "ststm32",
+    "build": {
+        "libArchive": false,
+		"flags": [
+			"-I inc",
+			"-I src"
+		]
+    }
+}
