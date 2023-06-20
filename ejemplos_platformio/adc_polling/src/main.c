@@ -3,7 +3,6 @@
 #include "stm32f1xx_hal_gpio.h"
 
 #include <math.h>
-
 #include "clocks.h"
 
 #define ADC_GPIO    GPIOA       // GPIO usado para el ADC
@@ -58,6 +57,8 @@ int main(void) {
         .Instance = ADC1,
         .Init = adc_config
     };
+    // Inicializo el ADC
+    HAL_ADC_Init(&hadc1);
 
     // Estructura de configuracion de canal de ADC
     ADC_ChannelConfTypeDef adc_channel_config = {
@@ -84,6 +85,8 @@ int main(void) {
     while(1) {
         // Inicio conversion
         HAL_ADC_Start(&hadc1);
+        // Espero a que este lista
+        while(HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY) != HAL_OK);
         // Espero el resultado
         uint16_t adc_val = HAL_ADC_GetValue(&hadc1);
         // Calculo el valor de la temperatura marcada por el NTC
@@ -91,11 +94,11 @@ int main(void) {
         // Verifico el valor para encender o apagar el LED
         if(celsius > 27) {
             // Enciendo el LED
-            HAL_GPIO_WritePin(LED_GPIO, LED_PIN, GPIO_PIN_SET);
+            HAL_GPIO_WritePin(LED_GPIO, LED_PIN, GPIO_PIN_RESET);
         }
         else {
             // Apago el LED
-            HAL_GPIO_WritePin(LED_GPIO, LED_PIN, GPIO_PIN_RESET);
+            HAL_GPIO_WritePin(LED_GPIO, LED_PIN, GPIO_PIN_SET);
         }
     }
 
