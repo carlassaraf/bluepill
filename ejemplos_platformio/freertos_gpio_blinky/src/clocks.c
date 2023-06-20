@@ -27,4 +27,7 @@ void SystemClock_Config(void) {
     };
     // Configuro clocks con la 
     HAL_RCC_ClockConfig(&rcc_clk_init, FLASH_LATENCY_2);
+
+    // Configuro el valor del clock a 72 MHz para referencia del FreeRTOS
+    SystemCoreClock = HAL_RCC_GetSysClockFreq();
 }
