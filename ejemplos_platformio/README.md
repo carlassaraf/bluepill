@@ -8,8 +8,9 @@ A continuacion se describen los ejemplos hasta ahora disponibles que fueron desa
 
 | Ejemplo | Descripcion |
 | --- | --- |
-| [ADC polling](adc_polling) | Lectura de un NTC con polling |
+| [ADC polling](adc_polling) | Lectura de un NTC con polling
 | [ADC interrupt](adc_interrupt) | Lectura de un NTC con interrupcion
+| [ADC dual channel polling](adc_dual_channel_polling) | Lectura de un NTC y potenciometro con polling 
 
 ## FreeRTOS
 
@@ -28,4 +29,5 @@ A continuacion se describen los ejemplos hasta ahora disponibles que fueron desa
 [gpio_input]: gpio_input/
 [adc_polling]: adc_polling/
 [adc_interrupt]: adc_interrupt/
+[adc_dual_channel_polling]: adc_dual_channel_polling/
 [freertos_gpio_blinky]: freertos_gpio_blinky/
