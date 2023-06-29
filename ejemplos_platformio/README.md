@@ -25,6 +25,12 @@ A continuacion se describen los ejemplos hasta ahora disponibles que fueron desa
 | [Blinky](gpio_blinky) | Parpadeo de un LED de forma intermitente |
 | [Input](gpio_input) | Uso de entrada digital con pulsador | 
 
+## Configuracion de clock
+
+En todos los ejemplos, los clocks del sistema y perifericos son configurados como en la imagen siguiente para tener de referencia:
+
+![](./bluepill_clock_config.png)
+
 [gpio_blinky]: gpio_blinky/
 [gpio_input]: gpio_input/
 [adc_polling]: adc_polling/
